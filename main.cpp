@@ -14,7 +14,7 @@ int main() {
     regex rgx = regex(pattern, regex::ECMAScript | regex::icase);
 
     RtAudio::DeviceInfo info;
-    for (int i = 0; i < deviceCount; ++i) {
+    for (unsigned int i = 0; i < deviceCount; ++i) {
         info = audio.getDeviceInfo(i);
 
         if(info.probed == true) {
