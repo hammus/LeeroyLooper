@@ -10,4 +10,3 @@ cd /home/pi/LeeroyLooper
 echo $(pwd)
 git pull
 g++ -v -std=c++11 -Wall -D__LINUX_ALSA__ -o ./bin/audioprobe main.cpp ../rtaudio/RtAudio.cpp -I../rtaudio -I../rtaudio/include -lasound -lpthread
-./bin/audioprobe
