@@ -8,7 +8,7 @@ int main() {
     RtAudio audio;
     size_t deviceCount = audio.getDeviceCount();
 
-    cout << "-------------------------------------------------------------------" << endl;
+    cout << "Test PI" << endl;
 
     string pattern = "(.*)(Liam)(.*)";
     regex rgx = regex(pattern, regex::ECMAScript | regex::icase);
