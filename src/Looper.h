@@ -17,7 +17,8 @@ if( regex_match(info.name, rgx) ) {
 
 class Looper {
 public:
-    void printDeviceInfo();
+    void printDeviceList();
+    void printDeviceInfo(unsigned int idx);
     int findDevice(std::string deviceName);
 private:
     RtAudio rtAudio;
