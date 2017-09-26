@@ -10,9 +10,12 @@
                 "/usr/include",
                 "/Users/liam/Documents/rtaudio",
                 "/Users/liam/Documents/rtaudio/include",
-                "${workspaceRoot}"
+                "${workspaceRoot}",
+                "${workspaceRoot}/src"
             ],
-            "defines": ["__MACOSX_CORE__"],
+            "defines": [
+                "__MACOSX_CORE__"
+            ],
             "intelliSenseMode": "clang-x64",
             "browse": {
                 "path": [

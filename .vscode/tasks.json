@@ -7,22 +7,7 @@
             "taskName": "Build Mac",
             "type": "shell",
             "osx": {
-                "command": "g++",
-                "args": [
-                    "-v",
-                    "-Wall",
-                    "-D__MACOSX_CORE__",
-                    "-o",
-                    "./bin/audioprobe",
-                    "./*.cpp",
-                    "../rtaudio/RtAudio.cpp",
-                    "-I../rtaudio",
-                    "-framework",
-                    "CoreAudio",
-                    "-framework",
-                    "CoreFoundation",
-                    "-lpthread"
-                ]
+                "command": "make mac",
             },
             "group": {
                 "kind": "build",

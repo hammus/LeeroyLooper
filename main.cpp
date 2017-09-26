@@ -3,7 +3,7 @@
 int main() {
 
     Looper looper;
-    looper.printAvailableDevices();
+    looper.printDeviceInfo();
     return 0;
    
 }
