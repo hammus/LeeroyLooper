@@ -1,5 +1,6 @@
 #include "Looper.h"
 #include <iostream>
+#include <regex>
 using namespace std;
 
 void Looper::printDeviceList()
@@ -11,7 +12,7 @@ void Looper::printDeviceList()
     cout << "-------------------------------------------------------------------" << endl;
     for (unsigned int i = 0; i < deviceCount; ++i)
     {
-        //Note for my C++ noobishness: requires arrow accessor here as this in C++ is a pointer 
+        //Note for my C++ noobishness: requires arrow accessor here as this in C++ is a pointer
         this->printDeviceInfo(i);
     }
 }
@@ -39,4 +40,30 @@ void Looper::printDeviceInfo(unsigned int idx)
 
         cout << "-------------------------------------------------------------------" << endl;
     }
+}
+
+int Looper::findDevice(std::string deviceName)
+{
+
+    unsigned int deviceCount = rtAudio.getDeviceCount();
+    unsigned int foundDevice = -1;
+    RtAudio::DeviceInfo info;
+
+    for (unsigned int i = 0; i < deviceCount; ++i)
+    {
+        info = rtAudio.getDeviceInfo(i);
+        string pattern = "(.*)(" + deviceName + ")(.*)";
+        regex rgx = regex(pattern, regex::ECMAScript | regex::icase);
+    
+        if (regex_match(info.name, rgx))
+        {
+            cout << "*** Matched Device ***" << endl;
+            this->printDeviceInfo(i);
+            foundDevice = i;
+            break;
+        }
+    }
+
+    return foundDevice;
+    
 }

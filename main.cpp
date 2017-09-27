@@ -3,7 +3,7 @@
 int main() {
 
     Looper looper;
-    looper.printDeviceList();
+    int MyDevice = looper.findDevice("SoundFlower");
     return 0;
    
 }
