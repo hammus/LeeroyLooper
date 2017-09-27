@@ -3,7 +3,7 @@
 int main() {
 
     Looper looper;
-    int MyDevice = looper.findDevice("SoundFlower");
+    int MyDevice = looper.findDevice("Focusrite");
     return 0;
    
 }
