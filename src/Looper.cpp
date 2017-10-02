@@ -42,7 +42,7 @@ void Looper::printDeviceInfo(unsigned int idx)
     }
 }
 
-int Looper::findDevice(std::string deviceName)
+int Looper::findDeviceByName(std::string deviceName)
 {
 
     unsigned int deviceCount = rtAudio.getDeviceCount();

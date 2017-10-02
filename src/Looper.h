@@ -5,7 +5,7 @@ class Looper {
 public:
     void printDeviceList();
     void printDeviceInfo(unsigned int idx);
-    int findDevice(std::string deviceName);
+    int findDeviceByName(std::string deviceName);
 private:
     RtAudio rtAudio;
     

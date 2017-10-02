@@ -3,8 +3,9 @@
 int main() {
 
     Looper looper;
-    int MyDevice = looper.findDevice("Scarlett");
-    std::cout << "Device Result: " << MyDevice << std::endl;
+    // int MyDevice = looper.findDeviceByName("Scarlett");
+    looper.printDeviceList();
+    // std::cout << "Device Result: " << MyDevice << std::endl;
     return 0;
    
 }
