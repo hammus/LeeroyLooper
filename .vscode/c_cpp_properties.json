@@ -1,80 +1,80 @@
 {
-    "configurations": [
-        {
-            "name": "Mac",
-            "includePath": [
-                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
-                "/usr/local/include",
-                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include",
-                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
-                "/usr/include",
-                "/Users/liam/Documents/rtaudio",
-                "/Users/liam/Documents/rtaudio/include",
-                "${workspaceRoot}",
-                "${workspaceRoot}/src"
+  "configurations": [
+    {
+      "name": "Mac",
+      "includePath": [
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
+        "/usr/local/include",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+        "/usr/include",
+        "/Users/liam/Documents/rtaudio",
+        "/Users/liam/Documents/rtaudio/include",
+        "${workspaceRoot}",
+        "${workspaceRoot}/src"
+      ],
+      "defines": ["__MACOSX_CORE__"],
+      "intelliSenseMode": "clang-x64",
+      "browse": {
+        "path": [
+          "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
+          "/usr/local/include",
+          "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include",
+          "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+          "/usr/include",
+          "/Users/liam/Documents/rtaudio",
+          "/Users/liam/Documents/rtaudio/include",
+          "${workspaceRoot}"
+        ],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
+      },
+      "macFrameworkPath": ["/System/Library/Frameworks", "/Library/Frameworks"]
+    },
+    {
+      "name": "Linux",
+      "includePath": ["/usr/include", "/usr/local/include", "${workspaceRoot}"],
+      "defines": [],
+      "intelliSenseMode": "clang-x64",
+      "browse": {
+        "path": ["/usr/include", "/usr/local/include", "${workspaceRoot}"],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
+      }
+    },
+    {
+        "name": "Win32",
+        "intelliSenseMode": "clang-x64",
+        "includePath": [
+            "${workspaceRoot}",
+            "${workspaceRoot}/src",
+            "${workspaceRoot}/../rtaudio",
+            "${workspaceRoot}/../rtaudio/include",
+            "c:/mingw/lib/gcc/mingw32/6.3.0/include/c++",
+            "c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/mingw32",
+            "c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/backward",
+            "c:/mingw/lib/gcc/mingw32/6.3.0/include",
+            "c:/mingw/include",
+            "c:/mingw/lib/gcc/mingw32/6.3.0/include-fixed",
+            "c:/mingw/mingw32/include"
+        ],
+        "defines": [
+            "_DEBUG",
+            "UNICODE",
+            "__GNUC__=5",
+            "__cdecl=__attribute__((__cdecl__))"
+        ],
+        "browse": {
+            "path": [
+                "C:/MinGW/lib/gcc/mingw32/6.3.0/include",
+                "C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
+                "C:/MinGW/include/*"
             ],
-            "defines": [
-                "__MACOSX_CORE__"
-            ],
-            "intelliSenseMode": "clang-x64",
-            "browse": {
-                "path": [
-                    "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
-                    "/usr/local/include",
-                    "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include",
-                    "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
-                    "/usr/include",
-                    "/Users/liam/Documents/rtaudio",
-                    "/Users/liam/Documents/rtaudio/include",
-                    "${workspaceRoot}"
-                ],
-                "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": ""
-            },
-            "macFrameworkPath": [
-                "/System/Library/Frameworks",
-                "/Library/Frameworks"
-            ]
-        },
-        {
-            "name": "Linux",
-            "includePath": [
-                "/usr/include",
-                "/usr/local/include",
-                "${workspaceRoot}"
-            ],
-            "defines": [],
-            "intelliSenseMode": "clang-x64",
-            "browse": {
-                "path": [
-                    "/usr/include",
-                    "/usr/local/include",
-                    "${workspaceRoot}"
-                ],
-                "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": ""
-            }
-        },
-        {
-            "name": "Win32",
-            "includePath": [
-                "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include",
-                "${workspaceRoot}"
-            ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE"
-            ],
-            "intelliSenseMode": "msvc-x64",
-            "browse": {
-                "path": [
-                    "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include/*",
-                    "${workspaceRoot}"
-                ],
-                "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": ""
-            }
+            "limitSymbolsToIncludedHeaders": true,
+            "databaseFilename": ""
         }
-    ],
-    "version": 3
+    }
+    
+  ],
+  "version": 3
 }

@@ -1,4 +1,4 @@
-# AUTHOR'S NOTE: This is very specific to my setup and will not work if you have cloned this repo
+# AUTHORS NOTE: This is very specific to my setup and will not work if you have cloned this repo
 
 ###################################################
 # Remotely Fetch and Build the project on the RPI #

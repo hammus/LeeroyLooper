@@ -9,7 +9,7 @@ void Looper::printDeviceList()
     unsigned int deviceCount = rtAudio.getDeviceCount();
 
     RtAudio::DeviceInfo info;
-    cout << "-------------------------------------------------------------------" << endl;
+    std::cout << "-------------------------------------------------------------------" << std::endl;
     for (unsigned int i = 0; i < deviceCount; ++i)
     {
         //Note for my C++ noobishness: requires arrow accessor here as this in C++ is a pointer
@@ -24,16 +24,16 @@ void Looper::printDeviceInfo(unsigned int idx)
 
     if (info.probed == true)
     {
-        cout << "Name: " << info.name << endl;
-        cout << "Output Channels: " << info.outputChannels << endl;
-        cout << "Input Channels: " << info.inputChannels << endl;
-        cout << "Duplex Channels: " << info.duplexChannels << endl;
-        cout << "Preferred Sample Rate: " << info.preferredSampleRate << endl;
-        cout << "Available Sample Rates:" << endl;
+        std::cout << "Name: " << info.name << std::endl;
+        std::cout << "Output Channels: " << info.outputChannels << std::endl;
+        std::cout << "Input Channels: " << info.inputChannels << std::endl;
+        std::cout << "Duplex Channels: " << info.duplexChannels << std::endl;
+        std::cout << "Preferred Sample Rate: " << info.preferredSampleRate << std::endl;
+        std::cout << "Available Sample Rates:" << endl;
         unsigned int sampleRateCount = info.sampleRates.size();
         for (unsigned int j = 0; j < sampleRateCount; ++j)
         {
-            cout << "\t\t\t- " << info.sampleRates[j] << "Hz" << endl;
+            std::cout << "\t\t\t- " << info.sampleRates[j] << "Hz" << std::endl;
         }
         cout << "Default Output: " << ((info.isDefaultOutput) ? "Yes" : "No") << endl;
         cout << "Default Input: " << ((info.isDefaultInput) ? "Yes" : "No") << endl;

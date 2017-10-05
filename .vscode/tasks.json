@@ -4,10 +4,30 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "Build Mac",
+            "taskName": "Build",
             "type": "shell",
             "osx": {
-                "command": "make mac",
+                "command": "make mac"
+            },
+            "windows": {
+                "command": "g++",
+                "args": [
+                    "-v",
+                    "-Wall",
+                    "-D__WINDOWS_ASIO__",
+                    "-I./src",
+                    "-I../rtaudio",
+                    "-I../rtaudio/include",
+                    "-o",
+                    "${workspaceRoot}/bin/LeeroyLooper",
+                    "${workspaceRoot}/main.cpp",
+                    "${workspaceRoot}/src/*.cpp",
+                    "${workspaceRoot}/../rtaudio/RtAudio.cpp",
+                    "${workspaceRoot}/../rtaudio/include/asio*.cpp",
+                    "${workspaceRoot}/../rtaudio/include/iasiothiscallresolver.cpp",
+                    "-lole32"
+
+                ]
             },
             "group": {
                 "kind": "build",
@@ -18,7 +38,7 @@
             ]
         },
         {
-            "taskName": "Build Pi",
+            "taskName": "Build Pi (Bash/zsh)",
             "type": "shell",
             "command": "ssh",
             "args": [
