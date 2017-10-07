@@ -77,9 +77,10 @@
     <IncludePath>$(ProjectDir)lib\asio;$(ProjectDir)lib\rtaudio;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <SourcePath>$(ProjectDir);$(ProjectDir)src;$(ProjectDir)lib\rtaudio;$(ProjectDir)lib\asio;$(SourcePath)</SourcePath>
-    <IncludePath>$(ProjectDir)src;$(ProjectDir)lib\rtaudio;$(ProjectDir)lib\asio;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir);$(ProjectDir)src;$(SourcePath)</SourcePath>
+    <IncludePath>$(SolutionD‏ir)RtAudioLib\RtAudioLib\Debug;$(ProjectDir)src;$(IncludePath)</IncludePath>
     <OutDir>$(ProjectDir)bin\</OutDir>
+    <LibraryPath>$(SolutionD‏ir)RtAudioLib\RtAudioLib\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <SourcePath>$(ProjectDir);$(ProjectDir)src;$(ProjectDir)lib\rtaudio;$(ProjectDir)lib\asio;$(SourcePath)</SourcePath>
@@ -87,6 +88,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(ProjectDir)bin\</OutDir>
+    <IncludePath>E:\RtAudioLib\RtAudioLib\Release;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\RtAudioLib\RtAudioLib\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -95,7 +98,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;__WINDOWS_DS__;__WINDOWS_ASIO__;__WINDOWS_WASAPI__;WIN32;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp14</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)lib\asio;$(ProjectDir)lib\rtaudio;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)RtAudioLib\RtAudioLib\Debug;$(ProjectDir)lib\rtaudio;</AdditionalIncludeDirectories>
       <CompileAsManaged>false</CompileAsManaged>
       <CompileAsWinRT>false</CompileAsWinRT>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -103,7 +106,8 @@
       <DisableSpecificWarnings>%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;dsound.lib;RtAudioLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)RtAudioLib\RtAudioLib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -152,25 +156,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="lib\asio\asio.cpp" />
-    <ClCompile Include="lib\asio\asiodrivers.cpp" />
-    <ClCompile Include="lib\asio\asiolist.cpp" />
-    <ClCompile Include="lib\asio\iasiothiscallresolver.cpp" />
-    <ClCompile Include="lib\rtaudio\RtAudio.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\Looper.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="lib\asio\asio.h" />
-    <ClInclude Include="lib\asio\asiodrivers.h" />
-    <ClInclude Include="lib\asio\asiodrvr.h" />
-    <ClInclude Include="lib\asio\asiolist.h" />
-    <ClInclude Include="lib\asio\asiosys.h" />
-    <ClInclude Include="lib\asio\dsound.h" />
-    <ClInclude Include="lib\asio\ginclude.h" />
-    <ClInclude Include="lib\asio\iasiodrv.h" />
-    <ClInclude Include="lib\asio\iasiothiscallresolver.h" />
-    <ClInclude Include="lib\rtaudio\RtAudio.h" />
     <ClInclude Include="src\Looper.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
