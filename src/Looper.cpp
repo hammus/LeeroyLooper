@@ -16,6 +16,14 @@ void Looper::printDeviceList()
         this->printDeviceInfo(i);
     }
 }
+//Compile Lib 
+// i686-w64-mingw32-g++ -Wall -v -shared -Iinclude -D__WINDOWS_ASIO__ -o rtaudio.so RtAudio.cpp ./include/asio*.cpp ./include/iasiothiscallresolver.cpp -lole32
+//Compile DLL
+/*
+
+*/
+
+
 
 void Looper::printDeviceInfo(unsigned int idx)
 {
