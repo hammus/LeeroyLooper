@@ -1,9 +1,9 @@
 
 # Ignore `bin` dir
 bin
-VS2017/*
-!VS2017/LeeroyLooper.sln
-!VS2017/LeeroyLooper/LeeroyLooper.*
-
-# Don't commit ASIO or RtAudio files (licence for ASIO is non permissive and RtAudio is 3rd party and actively developed.)
-lib
+VS2017/LeeroyLooper/Debug
+VS2017/LeeroyLooper/Release
+VS2017/RtAudioLib/
+VS2017/RtAudioLib/RtAudioLib/Debug
+VS2017/RtAudioLib/RtAudioLib/Release
+/VS2017/.vs/LeeroyLooper/v15
