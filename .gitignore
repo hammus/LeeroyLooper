@@ -7,3 +7,6 @@ VS2017/RtAudioLib/
 VS2017/RtAudioLib/RtAudioLib/Debug
 VS2017/RtAudioLib/RtAudioLib/Release
 /VS2017/.vs/LeeroyLooper/v15
+/.vs/LeeroyLooper/v15
+*.tlog
+/LeeroyLooper/Debug

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{b78d2097-1862-4d1a-ab4d-989af22b3ca6}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)lib\asio.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lib\asiodrivers.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lib\asiolist.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lib\iasiothiscallresolver.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lib\RtAudio.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Looper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)lib\RtAudio.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Looper.h" />
+  </ItemGroup>
+</Project>

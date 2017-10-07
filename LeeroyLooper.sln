@@ -3,14 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LeeroyLooper", "LeeroyLooper\LeeroyLooper.vcxproj", "{34335075-2725-471B-BF1E-34467B601094}"
-	ProjectSection(ProjectDependencies) = postProject
-		{2EAB2342-FD5B-4867-837B-D94E3BA440C7} = {2EAB2342-FD5B-4867-837B-D94E3BA440C7}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LooperWin", "LeeroyLooper\LeeroyLooper.vcxproj", "{34335075-2725-471B-BF1E-34467B601094}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RtAudioLib", "RtAudioLib\RtAudioLib\RtAudioLib.vcxproj", "{2EAB2342-FD5B-4867-837B-D94E3BA440C7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LooperCrossPlat", "LooperCrossPlat\LooperCrossPlat.vcxitems", "{B78D2097-1862-4D1A-AB4D-989AF22B3CA6}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		LooperCrossPlat\LooperCrossPlat.vcxitems*{34335075-2725-471b-bf1e-34467b601094}*SharedItemsImports = 4
+		LooperCrossPlat\LooperCrossPlat.vcxitems*{b78d2097-1862-4d1a-ab4d-989af22b3ca6}*SharedItemsImports = 9
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
@@ -26,14 +27,6 @@ Global
 		{34335075-2725-471B-BF1E-34467B601094}.Release|x64.Build.0 = Release|x64
 		{34335075-2725-471B-BF1E-34467B601094}.Release|x86.ActiveCfg = Release|Win32
 		{34335075-2725-471B-BF1E-34467B601094}.Release|x86.Build.0 = Release|Win32
-		{2EAB2342-FD5B-4867-837B-D94E3BA440C7}.Debug|x64.ActiveCfg = Debug|x64
-		{2EAB2342-FD5B-4867-837B-D94E3BA440C7}.Debug|x64.Build.0 = Debug|x64
-		{2EAB2342-FD5B-4867-837B-D94E3BA440C7}.Debug|x86.ActiveCfg = Debug|Win32
-		{2EAB2342-FD5B-4867-837B-D94E3BA440C7}.Debug|x86.Build.0 = Debug|Win32
-		{2EAB2342-FD5B-4867-837B-D94E3BA440C7}.Release|x64.ActiveCfg = Release|x64
-		{2EAB2342-FD5B-4867-837B-D94E3BA440C7}.Release|x64.Build.0 = Release|x64
-		{2EAB2342-FD5B-4867-837B-D94E3BA440C7}.Release|x86.ActiveCfg = Release|Win32
-		{2EAB2342-FD5B-4867-837B-D94E3BA440C7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
